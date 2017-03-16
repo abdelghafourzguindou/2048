@@ -3,16 +3,20 @@
    <head>
       <meta charset="UTF-8">
       <title>2048</title>
-      <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css" />
+      <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.min.css" />
       <link rel="stylesheet" href="./css/style.css" type="text/css" />
    </head>
    <body>
       <div class="container">
          <div class="game_infos">
             <div class="target">2048</div>
-            <div class="score">score<br>25</div>
-            <div class="score">high-score<br>1000</div>
+            <div class="score">High-score<br><b>0</b></div>
+            <div class="score">Score<br><b>0</b></div>
          </div>
+         <div class="new_game">
+              <button type="button" onclick="Reset()" class="btn btn-warning" id="btn">New Game</button>
+          </div>
+          
          <div class="grid_game">
             <table >
             <tr>
@@ -41,7 +45,35 @@
             </tr>
         </table>
          </div>
+        <div class="programer_infos">
+          <!--Twitter-->
+          <a class="icons-sm tw-ic"><i class="fa fa-twitter"> </i></a>
+          <!--Google +-->
+          <a class="icons-sm gplus-ic"><i class="fa fa-google-plus"> </i></a>
+          <!--Linkedin-->
+          <a class="icons-sm li-ic"><i class="fa fa-linkedin"> </i></a>
+          <!--Instagram-->
+          <a class="icons-sm ins-ic"><i class="fa fa-instagram"> </i></a>
+          <!--Pinterest-->
+          <a class="icons-sm pin-ic"><i class="fa fa-pinterest"> </i></a>
+          <!--Vkontakte-->
+          <a class="icons-sm vk-ic"><i class="fa fa-vk"> </i></a>
+          <!--Youtube-->
+          <a class="icons-sm yt-ic"><i class="fa fa-youtube"> </i></a>
+          <!--Dribbble-->
+          <a class="icons-sm dribbble-ic"><i class="fa fa-dribbble"> </i></a>
+          <!--Stack Overflow-->
+          <a class="icons-sm so-ic"><i class="fa fa-stack-overflow"> </i></a>
+          <!--Slack-->
+          <a class="icons-sm slack-ic"><i class="fa fa-slack"> </i></a>
+          <!--Github-->
+          <a class="icons-sm git-ic"><i class="fa fa-github"> </i></a>
+          <!--Comments-->
+          <a class="icons-sm comm-ic"><i class="fa fa-comments"> </i></a>
+          <!--Email-->
+          <a class="icons-sm email-ic"><i class="fa fa-envelope-o"> </i></a>
+        </div>     
       </div>
-    
+    <script src="js/index.js"></script>
    </body>
 </html>

@@ -1,5 +1,5 @@
 function Game () {
-	this.SUCCES_SCORE = 2048;
+	//this.SUCCES_SCORE = 2048;
 	this.init = function() {
 		this.width = 4;
 		this.height= 4;

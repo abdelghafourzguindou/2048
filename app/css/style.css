@@ -1,45 +1,78 @@
+@import url(fonts/clear-sans.css);
+
 .game_infos {
 	width: 400px;
 	height: 80px;
-	margin: 25px;
-	margin-bottom: 10px;
+	margin: 35px;
+    margin-bottom: 10px;
+}
+
+.new_game {
+    width: 400px;
+    height: 40px;
+    margin: 35px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#btn {
+    float: right;
+    border-radius: 0px;
+    opacity: 0.8;
+    filter: alpha(opacity=30);
 }
 
 .score {
+    font-family: "Clear Sans";
+    color: white;
 	float: right;
-    margin: 5px;
+    margin-left: 5px;
     text-align: center;
     font-size: 16px;
-    color: white;
+    color: #ffffff;
     line-height: 35px;
     border-radius: 2px;
-    background-color: #ccc0b4;
+    background-color: #B8AF9E;
     width: 90px;
     color: #776e65;
     text-align: center;
     vertical-align: middle;
+    border-radius: 2px;
+    opacity: 0.8;
+    filter: alpha(opacity=30);
 }
 
 .target {
+    font-family: "Clear Sans";
 	float: left;
     background-color: #fcdb3c;
-    width: 80px;
+    width: 90px;
     height: 70px;
-    margin: 5px;
     text-align: center;
     font-size: 30px;
     color: #ffffff;
     line-height: 70px;
     border-radius: 2px;
+    opacity: 0.8;
+    filter: alpha(opacity=30);
+}
+
+.programer_infos{
+    width: 400px;
+    height: 40px;
+    margin: 10px;
+    margin-bottom: 0px;
 }
 
 .grid_game {
 	width: 400px;
 	height: 400px;
-	margin: 25px;
+	margin: 35px;
 	margin-top: 0px;
 	background: #B8AF9E;
 	border-radius: 5px;
+    opacity: 0.8;
+    filter: alpha(opacity=30);
 }
 
 .cell{
@@ -47,9 +80,8 @@
     background-color: #CCC0B2;
 }
 
-body{
-    color:#ffffff;
-    background-color: #faf8ef;
+body {
+    background-image: url("../res/background.jpg");
 }
 
 table {
@@ -71,4 +103,5 @@ td {
     font-size: 60px;
     text-align: center;
     vertical-align: middle;
+    border-radius: 2px;
 }
