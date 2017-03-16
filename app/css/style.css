@@ -1,0 +1,74 @@
+.game_infos {
+	width: 400px;
+	height: 80px;
+	margin: 25px;
+	margin-bottom: 10px;
+}
+
+.score {
+	float: right;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: white;
+    line-height: 35px;
+    border-radius: 2px;
+    background-color: #ccc0b4;
+    width: 90px;
+    color: #776e65;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.target {
+	float: left;
+    background-color: #fcdb3c;
+    width: 80px;
+    height: 70px;
+    margin: 5px;
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    line-height: 70px;
+    border-radius: 2px;
+}
+
+.grid_game {
+	width: 400px;
+	height: 400px;
+	margin: 25px;
+	margin-top: 0px;
+	background: #B8AF9E;
+	border-radius: 5px;
+}
+
+.cell{
+    margin-left: 10px;
+    background-color: #CCC0B2;
+}
+
+body{
+    color:#ffffff;
+    background-color: #faf8ef;
+}
+
+table {
+    height: 400px;
+    width: 400px;
+    border-spacing: 8px;
+    border-collapse: separate;
+    border-radius: 5px;
+}
+
+tr {
+
+}
+
+td {
+    background-color: #ccc0b4;
+    width: 90px;
+    color: #776e65;
+    font-size: 60px;
+    text-align: center;
+    vertical-align: middle;
+}
