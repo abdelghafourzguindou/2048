@@ -39,7 +39,7 @@ function Game () {
 		for(var i = 0; i < this.width; i++) {
 			for(var j = 0; j < this.height; j++) {
 				if(this.bord[i][j] > this.score) {
-					this.score = this.data[i][j];
+					this.score = this.bord[i][j];
 				}
 			}
 		}
@@ -65,6 +65,104 @@ function Game () {
 		}
 		return true;
 	}
+
+	this.left=function(){
+        
+        for(var raw=0;raw<this.height;raw++){
+            var col=0;
+            var k=0;
+            var flag=false;
+            while(col<this.width){
+                if(this.bord[raw][col]!=0){
+                    if(k>0 && this.bord[raw][col]===this.bord[raw][k-1] && flag===false){
+                        this.bord[raw][k-1]=this.bord[raw][col]*2;
+                        flag=true;
+                    }
+                    else{
+                        this.bord[raw][k]=this.bord[raw][col];
+                        k=k+1;
+                    }
+                }
+                col=col+1;
+            }
+            for (var l=k;l<this.width;l++){
+                this.bord[raw][l]=0;
+            }
+        }
+    }
+    
+    this.right=function(){
+        for(var raw=0;raw<this.height;raw++){
+            var col=this.width-1;
+            var k=this.width-1;
+            var flag=false;
+            while(col>-1){
+                if(this.bord[raw][col]!=0){
+                    if(k<this.width-1 && this.bord[raw][col]===this.bord[raw][k+1] && flag===false){
+                        this.bord[raw][k+1]=this.bord[raw][col]*2;
+                        flag=true;
+                    }
+                    else{
+                        this.bord[raw][k]=this.bord[raw][col];
+                        k=k-1;
+                    }
+                }
+                col=col-1;
+            }
+            for (var l=0;l<k+1;l++){
+                this.bord[raw][l]=0;
+            }
+        }
+    } 
+      
+    this.up=function(){
+        for(var col=0;col<this.width;col++){
+            var raw=0;
+            var k=0;
+            var flag=false;
+            while(raw<this.height){
+                if(this.bord[raw][col]!=0){
+                    if(k>0 && this.bord[raw][col]===this.bord[k-1][col] && flag===false){
+                        this.bord[k-1][col]=this.bord[raw][col]*2;
+                        flag=true;
+                    }
+                    else{
+                        this.bord[k][col]=this.bord[raw][col];
+                        k=k+1;
+                    }
+                }
+                raw=raw+1;
+            }
+            for (var l=k;l<this.height;l++){
+                this.bord[l][col]=0;
+            }
+        }
+    } 
+    
+    this.down=function(){
+        for(var col=0;col<this.width;col++){
+            var raw=this.height-1;
+            var k=this.height-1;
+            var flag=false;
+            while(raw>-1){
+                if(this.bord[raw][col]!=0){
+                    if(k<this.height-1 && this.bord[raw][col]===this.bord[k+1][col] && flag===false){
+                        this.bord[k+1][col]=this.bord[raw][col]*2;
+                        flag=true;
+                    }
+                    else{
+                        this.bord[k][col]=this.bord[raw][col];
+                        k=k-1;
+                    }
+                }
+                raw=raw-1;
+            }
+
+            for (var l=0;l<k+1;l++){
+                this.bord[l][col]=0;
+            }
+        }
+    } 
 }
 
 module.exports = Game;
