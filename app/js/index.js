@@ -7,27 +7,28 @@ var cell_color	= conf.read_conf('cell_color');
 var Game 		= require('./js/game');
 var game 		= new Game();
 var cells 		= document.querySelectorAll('td');
-var score 		= document.querySelectorAll('.score');
+var GameScore   = document.getElementById('score');
+var HightScore  = document.getElementById('Hscore');
 
 game.init();
-game.show_game_infos();
 update_cell_contents();
 
-var best_score = localStorage.getItem('best_score');
-if(best_score === null) best_score = 0;
-score.textContent = best_score;
+var hight_score = localStorage.getItem('hight_score');
+if(hight_score === null) hight_score = 0;
+HightScore.textContent = hight_score;
 
-function save_best_score(score) {
-	if(score > best_score) {
-		best_score = score;
-		localStorage.setItem('best_score', best_score);
-		best_score_item.textContent = best_score;
+function save_hight_score(score) {
+	if(game.score > hight_score) {
+		hight_score = game.score;
+		localStorage.setItem('hight_score', hight_score);
+		HightScore.textContent = hight_score;
 	}
 }
 
 function Reset() {
 	game.init();
 	update_cell_contents();
+	GameScore.textContent = 0;
 }
 
 function update_cell_contents() {
@@ -49,9 +50,9 @@ function update_cell_contents() {
 function update_view () {
 	update_cell_contents();
 	game.get_score();
-	score.textContent = game.score;
+	GameScore.textContent = game.score;
 	if(game.ouver()) {
-		save_best_score(game.score);
+		save_hight_score(game.score);
 	}
 	game.generate_new_number();
 }

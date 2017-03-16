@@ -24,17 +24,15 @@
 
 .score {
     font-family: "Clear Sans";
-    color: white;
 	float: right;
     margin-left: 5px;
     text-align: center;
     font-size: 16px;
-    color: #ffffff;
+    color: #776e65;
     line-height: 35px;
     border-radius: 2px;
     background-color: #B8AF9E;
     width: 90px;
-    color: #776e65;
     text-align: center;
     vertical-align: middle;
     border-radius: 2px;
@@ -92,15 +90,11 @@ table {
     border-radius: 5px;
 }
 
-tr {
-
-}
-
 td {
     background-color: #ccc0b4;
     width: 90px;
     color: #776e65;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
     vertical-align: middle;
     border-radius: 2px;

@@ -45,16 +45,6 @@ function Game () {
 		}
 	}
 
-	this.show_game_infos = function() {
-		for(var i = 0; i < this.width; i++) {
-			for(var j = 0; j < this.height; j++) {
-				process.stdout.write(this.bord[i][j] + ' ');
-			}
-			process.stdout.write('\n');
-		}
-		process.stdout.write('\n');
-	}
-
 	this.ouver = function() {
 		for(var i = 0; i < this.width; i++) {
 			for(var j = 0; j < this.height; j++) {
